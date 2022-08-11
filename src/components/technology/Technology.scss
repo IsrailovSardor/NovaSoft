@@ -1,21 +1,97 @@
+@import '../../vars.scss';
+
 .technology {
-    border-top:2px solid #c6ff00;
-    border-bottom:2px solid #c6ff00;
+    border-top: 2px solid;
+    border-bottom: 2px solid #c6ff00;
+    background-color: $secondry;
     padding: 40px;
+
     .container {
 
         h1 {
-
+            font: 800 60px "Inter";
+            color: black;
         }
-        .technology__block{ 
+
+        .technology__hide {
+            gap: 60px;
+            justify-content: center;
+            flex-wrap: wrap;
             display: flex;
-            gap: 40px;
-            .steck__icon {
-                width: 50px;
-                height: 50%;
-                fill: #c6ff00;
+
+            .icon {
+                max-width: 100px;
+                min-width: 100px;
+                height: auto;
                 color: white;
             }
         }
+
+        .technology__show {
+            gap: 60px;
+            justify-content: center;
+            flex-wrap: wrap;
+            display: flex;
+
+            .icon {
+                width: 100px;
+                height: auto;
+                color: white;
+            }
+
+            .icon-img {
+                width: 150px;
+                height: auto;
+            }
+        }
     }
+}
+@media (max-width:608px) {
+    .technology {
+        border-top: 2px solid;
+        border-bottom: 2px solid #c6ff00;
+        background-color: $secondry;
+        padding: 40px;
+    
+        .container {
+    
+            h1 {
+                font: 800 30px "Inter";
+                color: black;
+            }
+    
+            .technology__hide {
+                gap: 60px;
+                justify-content: center;
+                flex-wrap: wrap;
+                display: flex;
+    
+                .icon {
+                    max-width: 100px;
+                    min-width: 100px;
+                    height: auto;
+                    color: white;
+                }
+            }
+    
+            .technology__show {
+                gap: 60px;
+                justify-content: center;
+                flex-wrap: wrap;
+                display: flex;
+    
+                .icon {
+                    width: 100px;
+                    height: auto;
+                    color: white;
+                }
+    
+                .icon-img {
+                    width: 150px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
 }

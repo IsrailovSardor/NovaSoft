@@ -56,7 +56,6 @@ const Header = () => {
     <div className={"header"}>
       <div className={"container"}>
         <div className="logo">
-          <Logo className="logo__icon" />
           <p className="logo__text">NovaSoft</p>
         </div>
         <ul className={"header__list"}>

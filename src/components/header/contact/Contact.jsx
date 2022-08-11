@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReactComponent as Telephone } from "../../../images/icons/telephone.svg";
 import { ReactComponent as Mail } from "../../../images/icons/mail.svg";
-import { ReactComponent as Logo } from "../../../images/icons/logo.svg";
 import { ReactComponent as Linkidink } from "../../../images/icons/linkiding.svg";
 import { ReactComponent as Telegram } from "../../../images/icons/telegram.svg";
 import { ReactComponent as Instagram } from "../../../images/icons/instagram.svg";
@@ -12,22 +11,12 @@ const Contact = ({consultation,onClose}) => {
       <div className={`block__consultation ${consultation ? "active" : ""}`}>
         <div className="about__head">
           <div className="logo">
-            <Logo className="logo__icon" />
             <p className="logo__text">NovaSoft</p>
           </div>
           <button className="about__close" onClick={onClose}>
             X
           </button>
         </div>
-        <div className="about__content">
-          <p className="about__title">About</p>
-          <p className="about__descr">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            laborum molestiae sequi quae provident nisi repudiandae illo est?
-            At, odio?
-          </p>
-        </div>
-        <button className="about__btn">Написать</button>
         <div className="about__contact">
           <p className="about__title">Contact Information</p>
           <div>

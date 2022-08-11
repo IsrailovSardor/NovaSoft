@@ -1,6 +1,5 @@
 import React, { useId } from "react";
 import "./menu.scss";
-import { ReactComponent as Logo } from "../../../images/icons/logo.svg";
 
 const Menu = ({ headerList, openMenu, onClose }) => {
   const listItemId = useId();
@@ -10,7 +9,6 @@ const Menu = ({ headerList, openMenu, onClose }) => {
         <div className={`mobile__menu ${openMenu ? "mobile_active" : ""}`}>
           <div className="about__head">
             <div className="logo">
-              <Logo className="logo__icon" />
               <p className="logo__text">NovaSoft</p>
             </div>
             <div className="btns__block">

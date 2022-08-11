@@ -1,0 +1,21 @@
+.technology {
+    border-top:2px solid #c6ff00;
+    border-bottom:2px solid #c6ff00;
+    padding: 40px;
+    .container {
+
+        h1 {
+
+        }
+        .technology__block{ 
+            display: flex;
+            gap: 40px;
+            .steck__icon {
+                width: 50px;
+                height: 50%;
+                fill: #c6ff00;
+                color: white;
+            }
+        }
+    }
+}

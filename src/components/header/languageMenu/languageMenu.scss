@@ -1,5 +1,8 @@
 @media (max-width:575px) {
     .header__languageMenu {
         display: none;
+        .lang-open {
+            color: #062052;
+        }
     }
 }

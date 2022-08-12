@@ -24,13 +24,8 @@
       font-size: 100px;
       letter-spacing: 5px;
       font-family: Inter, sans-serif;
-      background-color: $green;
+      //background-color: $green;
       padding: 10px;
-      opacity: 0;
-      transition: 1s;
-      &.active{
-        opacity: 1;
-      }
     }
     .back-wrapper {
       position: absolute;

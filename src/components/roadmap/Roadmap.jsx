@@ -30,7 +30,7 @@ const items = [
 const Roadmap = () => {
     const id = useId()
     const [entered, setEntered] = useState(true)
-    const [titleActive, setTitleActive] = useState(true)
+
     return (
         <section className={`roadmap ${entered ? 'dark' : ''}`}>
             <Parallax onExit={() => {
@@ -52,18 +52,12 @@ const Roadmap = () => {
                         </Parallax>
                     </div>
                     <Parallax speed={-60}
-
+                              opacity={[1, 0]}
                     >
-                        <h1 className={titleActive ? 'active' : ''}>
+                        <h1>
                             Roadmap
                         </h1>
                     </Parallax>
-                    <Parallax onEnter={() => {
-                                  setTitleActive(false)
-                              }}
-                              onExit={() => {
-                                  setTitleActive(true)
-                              }}>
                         {
                             items.map((item, index) =>
                                 <div key={`${id}__${item.title}__${index}`}
@@ -86,7 +80,6 @@ const Roadmap = () => {
                                 </div>
                             )
                         }
-                    </Parallax>
                 </div>
             </Parallax>
         </section>

@@ -30,32 +30,35 @@ const items = [
 const Roadmap = () => {
     const id = useId()
     return (
-        <Parallax >
-            <section className={'roadmap'}>
-                <div className="container">
-                    <h1>
-                        Roadmap
-                    </h1>
-                    {
-                        items.map((item, index) =>
-                            <div key={`${id}__${item.title}__${index}`}
-                                 className={'roadmap__item'}
+        <section className={'roadmap'}>
+            <div className="container">
+                <h1>
+                    Roadmap
+                </h1>
+                {
+                    items.map((item, index) =>
+                        <div key={`${id}__${item.title}__${index}`}
+                             className={'roadmap__item'}
+                        >
+                            <Parallax translateX={[-300, 0]}
+                                      easing={'easeOutQuad'}
+                                      speed={-10}
                             >
                                 <RoadmapItem title={item.title}
                                              description={item.description}
                                              image={require(`../../images/roadmap/${item.image}`)}
                                              index={index+1}
                                 />
-                                {
-                                    index+1 !== items.length &&
-                                    <Divider/>
-                                }
-                            </div>
-                        )
-                    }
-                </div>
-            </section>
-        </Parallax>
+                            </Parallax>
+                            {/*{*/}
+                            {/*    index+1 !== items.length &&*/}
+                            {/*    <Divider/>*/}
+                            {/*}*/}
+                        </div>
+                    )
+                }
+            </div>
+        </section>
     );
 };
 

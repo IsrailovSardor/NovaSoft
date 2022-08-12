@@ -51,8 +51,7 @@ const Roadmap = () => {
                             <img className={'back'} src={back} alt={"back"}/>
                         </Parallax>
                     </div>
-                    <Parallax speed={-60}
-                              opacity={[1, 0]}
+                    <Parallax
                     >
                         <h1>
                             Roadmap

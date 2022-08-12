@@ -21,6 +21,27 @@
       -ms-user-select: none; /* Internet Explorer/Edge */
       user-select: none
     }
+    .h1::after {
+      content: "";
+      width: 8px;
+      height: 100%;
+      background: red;
+      display: block;
+      position: absolute;
+      right: -10px;
+      top: 0;
+      animation: blink 0.5s ease infinite alternate-reverse;
+    }
+
+    @keyframes blink {
+      from {
+        opacity: 100%;
+      }
+
+      to {
+        opacity: 0%;
+      }
+    }
 
   }
 }

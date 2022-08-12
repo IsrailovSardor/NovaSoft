@@ -1,6 +1,9 @@
+@import "../../vars";
+
 .services{
-  background-color: #c6ff00;
-  color: black;
+  background-color: $green;
+  color: $primary;
+  font-family: Inter, sans-serif;
   .container{
     .services__list{
       display: grid;

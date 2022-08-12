@@ -1,15 +1,19 @@
+@import '../../../vars.scss';
+
 .roadmapItem{
-  border: 1px solid #c6ff00;
-  background-color: #222222;
+  border: 5px solid $primary;
+  background-color: $green;
   width: 100%;
   max-width: 570px;
-  margin: 50px 0;
+  margin-bottom: 200px;
+  color: $primary;
+  font-family: Inter, sans-serif;
   .roadmap__header{
     height: 50px;
     padding: 10px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #c6ff00;
+    border-bottom: 1px solid $primary;
     .index{
       margin-right: 40px;
       aspect-ratio: 1;
@@ -18,18 +22,20 @@
       justify-content: center;
       align-items: center;
       font-size: 18px;
-      background-color: #c6ff00;
-      color: black;
+      background-color: $primary;
+      color: $green;
     }
   }
   .roadmap__body{
     padding: 40px 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     p{
       max-width: 370px;
     }
     img{
+      margin-top: 30px;
       width: 100px;
     }
   }
@@ -43,6 +49,7 @@
       img{
         width: 140px;
         margin-bottom: 30px;
+        margin-top: 0;
       }
       p{
         text-align: center;

@@ -10,7 +10,7 @@ const Banner = () => {
         <div className={'banner'}>
             <div className="container">
                 <h1>
-                    {word}
+                    We create fantastic software
                 </h1>
             </div>
         </div>

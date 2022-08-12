@@ -1,17 +1,74 @@
+@import '../../vars.scss';
+
 .roadmap{
-  color: white;
+  color: $primary;
+  background-color: white;
   padding: 80px 0;
   overflow: hidden;
+  position: relative;
+  transition: 3s;
+  &.dark{
+    background-color: $primary;
+    transition: 3s;
+  }
   .container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    h1{
+      position: relative;
+      margin-top: 200px;
+      margin-bottom: 300px;
+      z-index: 1;
+      font-size: 100px;
+      letter-spacing: 5px;
+      font-family: Inter, sans-serif;
+      background-color: $green;
+      padding: 10px;
+      opacity: 0;
+      transition: 1s;
+      &.active{
+        opacity: 1;
+      }
+    }
+    .back-wrapper {
+      position: absolute;
+      opacity: .5;
+      display: flex;
+      width: 100%;
+      justify-content: start;
+      margin-top: 300px;
+      z-index: 0;
+      &.right{
+        justify-content: end;
+        bottom: 0;
+      }
+      .back {
+        max-width: 500px;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
     .roadmap__item{
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
       font-size: 18px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .roadmap{
+    .container{
+      h1{
+        font-size: 40px;
+      }
     }
   }
 }

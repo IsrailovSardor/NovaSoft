@@ -1,8 +1,8 @@
-import React, {useId} from 'react';
+import React, {useId, useState} from 'react';
 import './roadmap.scss'
 import RoadmapItem from "./roadmapItem/RoadmapItem";
-import Divider from "./divider/Divider";
 import {Parallax} from "react-scroll-parallax";
+import back from '../../images/roadmap/back1.png'
 
 const items = [
     {
@@ -29,35 +29,66 @@ const items = [
 
 const Roadmap = () => {
     const id = useId()
+    const [entered, setEntered] = useState(true)
+    const [titleActive, setTitleActive] = useState(true)
     return (
-        <section className={'roadmap'}>
-            <div className="container">
-                <h1>
-                    Roadmap
-                </h1>
-                {
-                    items.map((item, index) =>
-                        <div key={`${id}__${item.title}__${index}`}
-                             className={'roadmap__item'}
+        <section className={`roadmap ${entered ? 'dark' : ''}`}>
+            <Parallax onExit={() => {
+                            setEntered(true)
+                      }}
+                      onEnter={() => {
+                          setEntered(false)
+                      }}>
+                <div className="container">
+                    <div className={'back-wrapper right'}>
+                        <Parallax speed={-100}
                         >
-                            <Parallax translateX={[-300, 0]}
-                                      easing={'easeOutQuad'}
-                                      speed={-10}
-                            >
-                                <RoadmapItem title={item.title}
-                                             description={item.description}
-                                             image={require(`../../images/roadmap/${item.image}`)}
-                                             index={index+1}
-                                />
-                            </Parallax>
-                            {/*{*/}
-                            {/*    index+1 !== items.length &&*/}
-                            {/*    <Divider/>*/}
-                            {/*}*/}
-                        </div>
-                    )
-                }
-            </div>
+                            <img className={'back'} src={back} alt={"back"}/>
+                        </Parallax>
+                    </div>
+                    <div className={'back-wrapper'}>
+                        <Parallax speed={-100}>
+                            <img className={'back'} src={back} alt={"back"}/>
+                        </Parallax>
+                    </div>
+                    <Parallax speed={-60}
+
+                    >
+                        <h1 className={titleActive ? 'active' : ''}>
+                            Roadmap
+                        </h1>
+                    </Parallax>
+                    <Parallax onEnter={() => {
+                                  setTitleActive(false)
+                              }}
+                              onExit={() => {
+                                  setTitleActive(true)
+                              }}>
+                        {
+                            items.map((item, index) =>
+                                <div key={`${id}__${item.title}__${index}`}
+                                     className={'roadmap__item'}
+                                >
+                                    <Parallax translateX={[-250, 100]}
+                                              easing={'easeOutQuad'}
+                                              speed={0}
+                                    >
+                                        <RoadmapItem title={item.title}
+                                                     description={item.description}
+                                                     image={require(`../../images/roadmap/${item.image}`)}
+                                                     index={index+1}
+                                        />
+                                    </Parallax>
+                                    {/*{*/}
+                                    {/*    index+1 !== items.length &&*/}
+                                    {/*    <Divider/>*/}
+                                    {/*}*/}
+                                </div>
+                            )
+                        }
+                    </Parallax>
+                </div>
+            </Parallax>
         </section>
     );
 };

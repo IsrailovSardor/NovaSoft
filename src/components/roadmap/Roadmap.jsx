@@ -40,18 +40,20 @@ const Roadmap = () => {
                           setEntered(false)
                       }}>
                 <div className="container">
-                    <div className={'back-wrapper right'}>
-                        <Parallax speed={-100}
-                        >
-                            <img className={'back'} src={back} alt={"back"}/>
-                        </Parallax>
-                    </div>
-                    <div className={'back-wrapper'}>
-                        <Parallax speed={-100}>
-                            <img className={'back'} src={back} alt={"back"}/>
-                        </Parallax>
-                    </div>
-                    <Parallax
+                    {/*<div className={'back-wrapper right'}>*/}
+                    {/*    <Parallax speed={-100}*/}
+                    {/*    >*/}
+                    {/*        <img className={'back'} src={back} alt={"back"}/>*/}
+                    {/*    </Parallax>*/}
+                    {/*</div>*/}
+                    {/*<div className={'back-wrapper'}>*/}
+                    {/*    <Parallax speed={-100}>*/}
+                    {/*        <img className={'back'} src={back} alt={"back"}/>*/}
+                    {/*    </Parallax>*/}
+                    {/*</div>*/}
+                    <Parallax rootMargin={{
+                        top: 200
+                    }}
                     >
                         <h1>
                             Roadmap

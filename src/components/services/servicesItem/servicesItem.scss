@@ -2,6 +2,7 @@
 
 .servicesItem{
   display: block;
+  width: 100%;
   color: $primary;
   max-width: 100%;
   padding-bottom: 40px;
@@ -55,7 +56,7 @@
 @media (max-width: 575px) {
   .servicesItem{
     img{
-      width: 150px;
+      width: 100px;
     }
     h2{
       font-size: 32px;

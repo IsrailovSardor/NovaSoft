@@ -2,7 +2,9 @@
 
 .roadmap{
   color: $primary;
-  background-color: white;
+  background-color: whitesmoke;
+  border-top: 2px solid $primary;
+  border-bottom: 2px solid $primary;
   padding: 80px 0;
   overflow: hidden;
   position: relative;
@@ -18,7 +20,7 @@
     position: relative;
     h1{
       position: relative;
-      margin-bottom: 300px;
+      margin-bottom: 150px;
       z-index: 1;
       font-size: 100px;
       letter-spacing: 5px;

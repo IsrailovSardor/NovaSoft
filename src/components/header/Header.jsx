@@ -4,8 +4,6 @@ import "./header.scss";
 import LanguageMenu from "./languageMenu/LanguageMenu";
 import Menu from "./menu/Menu";
 import Contact from "./contact/Contact";
-import { ReactComponent as Logo } from "../../images/icons/logo.svg";
-
 
 const Header = () => {
   const headerList = [

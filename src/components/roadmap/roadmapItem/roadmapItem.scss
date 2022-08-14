@@ -2,10 +2,10 @@
 
 .roadmapItem{
   border: 5px solid $primary;
-  background-color: $green;
+  background-color: whitesmoke;
   width: 100%;
   max-width: 570px;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   color: $primary;
   font-family: Inter, sans-serif;
   .roadmap__header{
@@ -23,7 +23,7 @@
       align-items: center;
       font-size: 18px;
       background-color: $primary;
-      color: $green;
+      color: whitesmoke;
     }
   }
   .roadmap__body{

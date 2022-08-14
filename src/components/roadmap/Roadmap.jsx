@@ -44,14 +44,9 @@ const Roadmap = () => {
                             <img className={'back'} src={back} alt={"back"}/>
                         </Parallax>
                     </div>
-                    <Parallax rootMargin={{
-                        top: 200
-                    }}
-                    >
-                        <h1>
-                            Roadmap
-                        </h1>
-                    </Parallax>
+                    <h1>
+                        Roadmap
+                    </h1>
                         {
                             items.map((item, index) =>
                                 <div key={`${id}__${item.title}__${index}`}

@@ -3,7 +3,13 @@ import './fadeInSection.scss'
 
 export default function FadeInSection(props) {
     const [isVisible, setVisible] = useState(false);
+    const [loaded, setLoaded] = useState(false)
     const domRef = useRef();
+
+    useEffect(() => {
+        if(isVisible) setLoaded(true)
+    }, [isVisible])
+
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => setVisible(entry.isIntersecting));
@@ -12,7 +18,7 @@ export default function FadeInSection(props) {
     }, []);
     return (
         <div
-            className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+            className={`fade-in-section ${isVisible || loaded ? 'is-visible' : ''}`}
             ref={domRef}
         >
             {props.children}

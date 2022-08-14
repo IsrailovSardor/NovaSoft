@@ -29,16 +29,9 @@ const items = [
 
 const Roadmap = () => {
     const id = useId()
-    const [entered, setEntered] = useState(true)
 
     return (
         <section className={`roadmap `}>
-            <Parallax onExit={() => {
-                            setEntered(true)
-                      }}
-                      onEnter={() => {
-                          setEntered(false)
-                      }}>
                 <div className="container">
                     <div className={'back-wrapper right'}>
                         <Parallax speed={-100}
@@ -64,8 +57,8 @@ const Roadmap = () => {
                                 <div key={`${id}__${item.title}__${index}`}
                                      className={'roadmap__item'}
                                 >
-                                    <Parallax translateX={[-250, 100]}
-                                              easing={'easeOutQuad'}
+                                    <Parallax translateX={[-130, -10]}
+                                              easing={'easeOutBack'}
                                               speed={0}
                                     >
                                         <RoadmapItem title={item.title}
@@ -82,7 +75,6 @@ const Roadmap = () => {
                             )
                         }
                 </div>
-            </Parallax>
         </section>
     );
 };

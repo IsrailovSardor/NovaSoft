@@ -1,6 +1,8 @@
+@import '../../vars';
+
 .banner{
   height: 100vh;
-  //background-color: #c6ff00;
+  background-color: whitesmoke;
   .container{
     height: 100%;
     display: flex;
@@ -8,11 +10,13 @@
     justify-content: center;
     align-items: center;
     h1{
+      font-family: Inter, sans-serif;
       font-size: 84px;
       line-height: 100px;
       letter-spacing: 1px;
       text-align: center;
       text-transform: uppercase;
+      color: $primary;
       max-width: 100%;
       -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -20,27 +24,6 @@
       -moz-user-select: none; /* Old versions of Firefox */
       -ms-user-select: none; /* Internet Explorer/Edge */
       user-select: none
-    }
-    .h1::after {
-      content: "";
-      width: 8px;
-      height: 100%;
-      background: red;
-      display: block;
-      position: absolute;
-      right: -10px;
-      top: 0;
-      animation: blink 0.5s ease infinite alternate-reverse;
-    }
-
-    @keyframes blink {
-      from {
-        opacity: 100%;
-      }
-
-      to {
-        opacity: 0%;
-      }
     }
 
   }

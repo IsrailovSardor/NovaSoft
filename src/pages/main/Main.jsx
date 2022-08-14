@@ -6,6 +6,7 @@ import Services from "../../components/services/Services";
 import Roadmap from "../../components/roadmap/Roadmap";
 import AboutUs from "../../components/aboutUs/AboutUs";
 import Technology from '../../components/technology/Technology';
+import ContactUs from "../../components/contactUs/ContactUs";
 
 const Main = () => {
     return (
@@ -16,6 +17,7 @@ const Main = () => {
             <Roadmap/>
             <AboutUs/>
             <Technology/>
+            <ContactUs/>
         </div>
     );
 };
